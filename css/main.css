@@ -183,7 +183,7 @@ option {
   padding: 10px 20px;
   border-radius: 8px;
   outline: none;
-  border: 0.5px solid black;
+  border: none;
   font-size: 20px;
 }
 #btn:hover {
