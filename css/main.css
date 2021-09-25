@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Space Mono";
-  background-color: #FFF7AE;
+  background-color: #FCD2D1;
   min-height: 100vh;
 }
 
@@ -47,7 +47,7 @@ a {
 }
 .header {
   position: fixed;
-  background: #F6D167;
+  background: #A73489;
   z-index: 2;
   width: 100%;
   top: 0;
@@ -88,7 +88,7 @@ a {
   max-width: 100%;
   padding: 20px;
   border-radius: 5px;
-  background-color: #DF2E2E;
+  background-color: #543864;
   margin-right: 8px;
   margin-left: 8px;
   margin-bottom: 15px;
@@ -143,10 +143,10 @@ time {
   padding: 10px;
   border-radius: 8px;
   outline: none;
-  border: 1px solid #DF2E2E;
+  border: 1px solid #543864;
 }
 #search:hover {
-  box-shadow: 5px 5px 15px #DF2E2E;
+  box-shadow: 5px 5px 15px #543864;
 }
 #search:active {
   transform: scale(1.02);
@@ -159,10 +159,10 @@ time {
   border-radius: 8px;
   outline: none;
   cursor: pointer;
-  border: 1px solid #DF2E2E;
+  border: 1px solid #543864;
 }
 .select:hover {
-  box-shadow: 5px 5px 15px #DF2E2E;
+  box-shadow: 5px 5px 15px #543864;
 }
 .select:active {
   transform: scale(1.02);
@@ -176,8 +176,8 @@ option {
 }
 
 #btn {
-  background-color: #DF2E2E;
-  color: #F6D167;
+  background-color: #543864;
+  color: white;
   font-weight: bold;
   cursor: pointer;
   padding: 10px 20px;
@@ -189,8 +189,8 @@ option {
 #btn:hover {
   transform: scale(1.02);
   transition: 0.7s;
-  background-color: #F6D167;
-  color: #DF2E2E;
+  background-color: white;
+  color: #543864;
   box-shadow: 5px 5px 15px black;
 }
 #btn:active {
@@ -200,22 +200,23 @@ option {
 
 .footer {
   padding: 10px 0;
-  background: #F6D167;
+  background: #A73489;
 }
 .footer__title {
   text-align: center;
-  color: #DF2E2E;
+  color: black;
+  font-size: 35px;
 }
 
 .films__btn {
-  background-color: black;
+  background-color: #A73489;
   color: white;
   font-weight: bold;
   cursor: pointer;
   padding: 10px 5px;
   border-radius: 8px;
   outline: none;
-  border: 0.5px solid black;
+  border: none;
   font-size: 18px;
 }
 .films__btn:hover {
