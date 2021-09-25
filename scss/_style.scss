@@ -1,26 +1,31 @@
 .header{
     position: fixed;
     // display: inline-block;
-    background: rgb(172, 46, 1);
+    background: #F6D167;
     z-index: 2;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
-}
-.header__title{
-    font-size: 40px;
-    color: white;
-    text-align: center;
-    margin: 10px 0;
-    // padding: 10px 0;
-    
+    &__section{
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+    }
+    &__title{
+        font-size: 40px;
+        color: white;
+        text-align: center;
+        margin: 10px 0;
+        // padding: 10px 0;
+        
+    }
 }
 .main{
     flex-grow: 1;
 }
 .films{
-    margin: 100px auto;
+    margin: 120px auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,7 +43,7 @@
         max-width: 100%;
         padding: 20px;
         border-radius: 5px;
-        background-color: rgb(248, 84, 25);
+        background-color: #DF2E2E;
         margin-right: 8px;
         margin-left: 8px;
         margin-bottom: 15px;
@@ -93,9 +98,9 @@ time{
     padding: 10px;
     border-radius: 8px;
     outline: none;
-    border:1px solid rgb(172, 46, 1);
+    border:1px solid #DF2E2E;
     &:hover{
-        box-shadow: 5px 5px 15px rgb(172, 46, 1);
+        box-shadow: 5px 5px 15px #DF2E2E;
     }
     &:active{
         transform: scale(1.02);
@@ -108,9 +113,9 @@ time{
     border-radius: 8px;
     outline: none;
     cursor: pointer;
-    border:1px solid rgb(172, 46, 1);
+    border:1px solid #DF2E2E;
     &:hover{
-        box-shadow: 5px 5px 15px rgb(172, 46, 1);
+        box-shadow: 5px 5px 15px #DF2E2E;
     }
     &:active{
         transform: scale(1.02);
@@ -123,8 +128,8 @@ option{
     cursor: pointer;
 }
 #btn{
-    background-color: rgb(172, 46, 1);
-    color: white;
+    background-color: #DF2E2E;
+    color: #F6D167;
     font-weight: bold;
     cursor: pointer;
     padding: 10px 20px;
@@ -135,8 +140,8 @@ option{
     &:hover{
         transform: scale(1.02);
         transition: 0.7s; 
-        background-color: white;
-        color: rgb(172, 46, 1);
+        background-color: #F6D167;
+        color: #DF2E2E;
         box-shadow: 5px 5px 15px black;
     }
     &:active{
@@ -146,11 +151,11 @@ option{
 }
 .footer{
     padding: 10px 0;
-    background: rgb(172, 46, 1);
+    background: #F6D167;
     
     &__title{
         text-align: center;
-        color: white;
+        color: #DF2E2E;
     }
 }
 .films__btn {
@@ -165,49 +170,48 @@ option{
     z-index: 0;
     border-radius: 10px;
     margin-left: 30px;
-}
 
-.films__btn:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+    &:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    &:active {
+        color: #000
+    }
+    
+    &:active:after {
+        background: transparent;
+    }
+    
+    &:hover:before {
+        opacity: 1;
+    }
+    
+    &:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
 }
-
-.films__btn:active {
-    color: #000
-}
-
-.films__btn:active:after {
-    background: transparent;
-}
-
-.films__btn:hover:before {
-    opacity: 1;
-}
-
-.films__btn:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
