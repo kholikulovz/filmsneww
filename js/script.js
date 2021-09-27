@@ -8,12 +8,13 @@ const elTemplate = selectElem('#template').content;
 function renderMovies(filmsArr, element){
     element.innerHTML = null;
     filmsArr.forEach((film) =>{
-        const cloneTemplate = elTemplate.cloneNode(true)
+        const cloneTemplate = elTemplate.cloneNode(true);
         
         selectElem('.films__img', cloneTemplate).src = film.poster;
         selectElem('.films__card-title', cloneTemplate).textContent = film.title;
         selectElem('.films__release-date', cloneTemplate).textContent = normalizeDate(film.release_date);
         selectElem('.films__release-date', cloneTemplate).datetime = normalizeDate(film.release_date);
+        selectElem('.films__btn', cloneTemplate);
         
         element.appendChild(cloneTemplate);
     })
@@ -26,7 +27,7 @@ function renderGenres(filmArr, element){
         film.genres.forEach(genre =>{
             if(!result.includes(genre)){
                 result.push(genre);
-            };
+            }; 
         });
     });
     result.forEach(genre =>{
@@ -65,7 +66,7 @@ elForm.addEventListener('submit', (e) =>{
                 return -1
             }else{
                 return 0
-            }
+            } 
         })
     }else if(filterValue === 'Z_A'){
         foundFilms.sort((a, b) => {
