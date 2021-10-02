@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
+<body> 
     <header class="header">
         <div class="container">
             <section class="header__section">
                 <img src="./img/star-movies-hd-logo-removebg-preview.png" width="200" alt="films__logo">
-            <!-- <h1 class="header__title">FILMS</h1> -->
+                <!-- <h1 class="header__title">FILMS</h1> -->
             </section>
         </div> 
     </header>
@@ -34,12 +35,29 @@
                     </select>
                     <button type="submit" id="btn">Search</button>
                 </form> 
+                <div class="modal">
+                    <div class="modal__card">
+                        <button class="modal__close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div class="modal__show-card">
+                            <img class="modal__show-card-img" src="https://picsum.photos/200/300" alt="">
+                            <div class="modal__show-card-right">
+                                <h3 class="modal__show-card-title">Shazam</h3>
+                                <p class="modal__show-card-genres">Action</p>
+                                <p class="modal__show-card-text">Lorem, ipsum dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="films__card-menu"> 
                     <template id="template">
                         <li class="films__card">
                             <img class="films__img" src="https://picsum.photos/300">
                             <h2 class="films__card-title">Shazam</h2>
-                            <time class="films__release-date" datetime="1.19.1970">1.19.1970</time>
+                            <time class="films__release-date" datetime="1.19.1970">
+                                1.19.1970
+                            </time>
                             <button class="films__btn">Show more</button>
                         </li>
                     </template>

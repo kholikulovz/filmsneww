@@ -198,16 +198,6 @@ option {
   transition: 0.5s;
 }
 
-.footer {
-  padding: 10px 0;
-  background: #A73489;
-}
-.footer__title {
-  text-align: center;
-  color: black;
-  font-size: 35px;
-}
-
 .films__btn {
   background-color: #A73489;
   color: white;
@@ -229,4 +219,72 @@ option {
 .films__btn:active {
   transform: scale(1.02);
   transition: 0.5s;
+}
+
+:root {
+  --clr-primary-5: hsl(205, 78%, 60%);
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --transition: all 0.3s linear;
+}
+
+.modal {
+  position: fixed;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.modal--active {
+  z-index: 2;
+  display: flex;
+}
+.modal__card {
+  width: 600px;
+  max-width: 100%;
+  padding: 10px;
+  background-color: #543864;
+}
+.modal__close-btn {
+  font-size: 1.75rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+  cursor: pointer;
+  color: var(--clr-red-dark);
+}
+.modal__close-btn:hover {
+  color: var(--clr-red-light);
+  transform: rotate(360deg);
+}
+.modal__show-card {
+  display: flex;
+}
+.modal__show-card-img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.modal__show-card-title {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.footer {
+  padding: 10px 0;
+  background: #A73489;
+}
+.footer__title {
+  text-align: center;
+  color: black;
+  font-size: 35px;
 }/*# sourceMappingURL=main.css.map */
