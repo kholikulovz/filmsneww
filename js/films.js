@@ -6,7 +6,7 @@ var films = [
 		overview:
 			'A boy is given the ability to become an adult superhero in times of need with a single magic word.',
 		release_date: 1553299200,
-		genres: ['Action', 'Comedy', 'Fantasy'],
+		genres: ['Action ', 'Comedy ', 'Fantasy '],
 	},
 	{
 		id: '299537',

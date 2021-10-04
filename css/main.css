@@ -59,11 +59,89 @@ a {
   display: flex;
   justify-content: center;
 }
-.header__title {
-  font-size: 40px;
+.header__bookmark {
+  position: absolute;
+  top: 15px;
+  right: 55px;
+  border: none;
+  background-color: transparent;
   color: white;
-  text-align: center;
-  margin: 10px 0;
+  cursor: pointer;
+}
+.header__bookmark--active {
+  color: #7c0707;
+  transform: scale(1.02);
+}
+
+.sidebar {
+  position: fixed;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: none;
+  align-items: flex-start;
+  justify-content: last baseline;
+  overflow: auto;
+}
+.sidebar--active {
+  z-index: 2;
+  display: flex;
+}
+.sidebar__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 536px;
+  min-height: 100vh;
+  background: #ee9ed9;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  transition: var(--transition);
+  padding: 30px;
+  overflow: auto;
+}
+.sidebar__wrapper .cards__like--btn {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .sidebar__wrapper {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .sidebar__wrapper {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sidebar__wrapper {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sidebar__wrapper {
+    width: 310px;
+  }
+}
+.close-btn {
+  font-size: 1.75rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+  cursor: pointer;
+  color: var(--clr-red-dark);
+}
+
+.close-btn:hover {
+  color: var(--clr-red-light);
+  transform: rotate(360deg);
 }
 
 .main {
@@ -84,6 +162,7 @@ a {
   justify-content: center;
 }
 .films__card {
+  position: relative;
   width: 320px;
   max-width: 100%;
   padding: 20px;
@@ -101,6 +180,19 @@ a {
 .films__card:hover {
   transform: scale(1.02);
   transition: 0.5s;
+}
+.films__card-bookmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+.films__card-bookmark--active {
+  color: red;
+  transform: scale(1.02);
 }
 .films__card-img {
   max-width: 100%;
@@ -236,6 +328,8 @@ option {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   display: none;
   justify-content: center;
   align-items: center;
@@ -268,6 +362,8 @@ option {
   display: flex;
 }
 .modal__show-card-img {
+  width: 200px;
+  height: 300px;
   max-width: 100%;
   border-radius: 5px;
   margin-right: 10px;
@@ -277,6 +373,12 @@ option {
   font-size: 28px;
   text-align: center;
   margin: 5px 0;
+}
+.modal__show-card-genres {
+  color: blanchedalmond;
+  margin: 10px 0;
+  font-size: 20px;
+  font-style: italic;
 }
 
 .footer {

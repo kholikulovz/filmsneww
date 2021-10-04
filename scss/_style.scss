@@ -16,6 +16,7 @@
         justify-content: center;
     }
     &__card{
+        position: relative;
         width: 320px;
         max-width: 100%;
         padding: 20px;
@@ -32,6 +33,19 @@
         &:hover{
             transform: scale(1.02);
             transition: 0.5s;
+        }
+        &-bookmark{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: none;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            &--active{
+                color: red;
+                transform: scale(1.02);
+            }
         }
         &-img{
             // width: 200px;
